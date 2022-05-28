@@ -1,4 +1,6 @@
-from typing import Any, Callable
+from typing import Any, Callable, Protocol
+
+import importlib
 
 _registration: dict[str, Callable[..., Any]] = {}
 
@@ -19,3 +21,17 @@ def create(arguments: dict[str, Any]) -> Callable[..., Any]:
         return creation_func(**args_copy)
     except KeyError:
         raise ValueError(f"Unknown registration type {type}") from None
+
+class Interface(Protocol):
+    
+    @staticmethod
+    def initialize() -> None:
+        """Initializes the interface."""
+
+def _import_module(name: str) -> Interface:
+    return importlib.import_module(name) #type: ignore
+
+def load_modules(modules: list[str]) -> None:
+    for module in modules:
+        imported_module = _import_module(module)
+        imported_module.initialize()
