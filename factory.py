@@ -4,9 +4,9 @@ import importlib
 
 _registration: dict[str, Callable[..., Any]] = {}
 
-def register(type: str, creation_function: Callable[..., Any]) -> None:
+def register(type: str, initializer: Callable[..., Any]) -> None:
     """Register a new class type."""
-    _registration[type] = creation_function
+    _registration[type] = initializer
 
 def unregister(type: str) -> None:
     """Unregister a class type."""
@@ -17,8 +17,8 @@ def create(arguments: dict[str, Any]) -> Callable[..., Any]:
     args_copy = arguments.copy()
     type = args_copy.pop("type")
     try:
-        creation_func = _registration[type]
-        return creation_func(**args_copy)
+        initializer = _registration[type]
+        return initializer(**args_copy)
     except KeyError:
         raise ValueError(f"Unknown registration type {type}") from None
 
