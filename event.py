@@ -1,6 +1,5 @@
 from typing import Callable, Any
 
-
 _subscribers: dict[str, list[Callable]] = dict()
 
 def subscribe(event_type: str, function: Callable) -> None:
