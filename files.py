@@ -1,6 +1,6 @@
 import zipfile
 
-def zip_files(name: str, files: list[str]):
+def zip_files(name: str, files: list[str]) -> None:
 
     zip_name = f"{name}.zip"
     
