@@ -2,7 +2,7 @@ import logging
 
 LoggingLevel = int
 
-def log(message: str, handler: str, format: str = "%(asctime)s:%(name)s:%(message)s", level: LoggingLevel = logging.INFO, output: bool = False) -> None:
+def log(message: str, handler: str, format: str = "%(asctime)s:%(name)s[%(levelname)s] - %(message)s", level: LoggingLevel = logging.INFO, output: bool = False) -> None:
 
     logger = logging.getLogger(__name__)
     logger.setLevel(level)
