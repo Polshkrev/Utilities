@@ -2,9 +2,10 @@ import logging
 
 LoggingLevel = int
 
-def log(message: str, handler: str, format: str = "%(asctime)s:%(name)s[%(levelname)s] - %(message)s", level: LoggingLevel = logging.INFO, output: bool = False) -> None:
+logger = logging.getLogger(__name__)
 
-    logger = logging.getLogger(__name__)
+def log(message: str, handler: str, format: str = "%(asctime)s:%(name)s[%(levelname)s] - %(message)s", level: LoggingLevel = logging.DEBUG) -> None:
+
     logger.setLevel(level)
 
     formatter = logging.Formatter(format)
@@ -17,9 +18,8 @@ def log(message: str, handler: str, format: str = "%(asctime)s:%(name)s[%(leveln
 
     logger.log(level, message)
 
-def console_log(message: str, format: str = "%(asctime)s:%(name)s:%(message)s", level: LoggingLevel = logging.INFO, output: bool = False) -> None:
+def console_log(message: str, format: str = "%(asctime)s:%(name)s:%(message)s", level: LoggingLevel = logging.DEBUG) -> None:
     
-    logger = logging.getLogger(__name__)
     logger.setLevel(level)
 
     formatter = logging.Formatter(format)
