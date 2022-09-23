@@ -2,18 +2,28 @@
  
 ## Table of Contents
 
-1. [Display](#display)
-2. [Database](#database)
-3. [Event](#event)
-4. [Factory](#factory)
+1. [Async](#async)
+2. [Compose](#compose)
+3. [Database](#database)
+4. [Display](#display)
+5. [Event](#event)
+6. [Factory](#factory)
+7. [Files](#files)
+8. [Log](#log)
+9. [Preprocess](#preprocess)
+10. [Types](#types)
 
-### Display
+### Async
 
-This module contains utilities that aid in the display of a programme.
+### Compose
 
 ### Database
 
 This module contains utilities that aid in the creation and reading of data in a database.
+
+### Display
+
+This module contains utilities that aid in the display of a programme.
 
 ### Event
 
@@ -42,3 +52,19 @@ classDiagram
     }
     Factory *-- Interface
 ```
+
+### Files
+
+This module contains functions to help in dealing with files.
+
+### Log
+
+This is a wrapper class over the logging module.
+
+### Preprocess
+
+This module contains functions to help with the preprocessing of data.
+
+### Types
+
+This is a collection of type aliases.
