@@ -1,7 +1,14 @@
 import logging
 from typing import Optional
+from enum import Enum
 
-LoggingLevel = int
+class LoggingLevel(Enum):
+
+    DEBUG = logging.DEBUG
+    INFO = logging.INFO
+    WARNING = logging.WARNING
+    ERROR = logging.ERROR
+    CRITICAL = logging.CRITICAL
 
 def _set_formatter(format: str = "%(asctime)s:%(name)s[%(levelname)s] - %(message)s") -> logging.Formatter:
     """Helper function to set the formatter of the logger. A logging class (or its attributes) is not needed to set the formatter."""
@@ -10,7 +17,7 @@ def _set_formatter(format: str = "%(asctime)s:%(name)s[%(levelname)s] - %(messag
 class Logger:
     """Logger utility to help with logging data."""
 
-    def __init__(self, name: Optional[str] = None, format: str = "%(asctime)s:%(name)s[%(levelname)s] - %(message)s", level: LoggingLevel = logging.DEBUG) -> None:
+    def __init__(self, name: Optional[str] = None, format: str = "%(asctime)s:%(name)s[%(levelname)s] - %(message)s", level: LoggingLevel = LoggingLevel.DEBUG) -> None:
         self.level = level
         self.format = format
         if name:
@@ -20,7 +27,7 @@ class Logger:
 
     def _set_level(self, level: LoggingLevel) -> None:
         """Helper method to set the level of the logger."""
-        self.logger.setLevel(level)
+        self.logger.setLevel(level.value)
 
     def add_console(self) -> None:
         """Adds the console to the logger."""
@@ -42,7 +49,6 @@ class Logger:
 
     def console_only(self) -> None:
         """Sets-up the logger that only logs to the console."""
-        # """Sets-up the logger with only the console."""
         self._set_level(self.level)
         self.add_console()
 
@@ -51,6 +57,6 @@ class Logger:
         self._set_level(self.level)
         self.add_file(filename)
 
-    def log(self, message: str, level: LoggingLevel = logging.DEBUG) -> None:
+    def log(self, message: str, level: LoggingLevel = LoggingLevel.DEBUG) -> None:
         """Logs a given message with a given LoggingLevel. If no level is given, DEBUG will be used."""
-        self.logger.log(level, message)
+        self.logger.log(level.value, message)
