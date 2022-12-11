@@ -1,4 +1,5 @@
-Graph = list[list[float]]
+# Graph = list[list[float]]
+from .aliases import Grid
 
 MAX_DISTANCE = 1e7
 
@@ -13,7 +14,7 @@ def min_dist(dist: list[float], processed: list[bool], max_distance: float = MAX
     return min_index
 
 
-def dijkstra(graph: Graph, index: int = 0, max_distance: float = MAX_DISTANCE) -> list[float]:
+def dijkstra(graph: Grid, index: int = 0, max_distance: float = MAX_DISTANCE) -> list[float]:
     """Dijkstra formula for finding the shortest path in a given graph."""
     vertex_count = len(graph)
     dist = [max_distance] * vertex_count

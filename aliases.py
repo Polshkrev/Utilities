@@ -6,3 +6,5 @@ JSONList = list[JSON]
 
 ComposableFunction = typing.Callable[..., typing.Any]
 AwaitableFunction = typing.Awaitable[typing.Any]
+
+Grid = list[list[int | float]]
