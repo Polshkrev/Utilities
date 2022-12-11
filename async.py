@@ -1,7 +1,8 @@
 import asyncio
-import typing
+# import typing
 
-AwaitableFunction = typing.Awaitable[typing.Any]
+# AwaitableFunction = typing.Awaitable[typing.Any]
+from .aliases import AwaitableFunction
 
 async def run_sequence(*functions: AwaitableFunction) -> None:
     for function in functions:
