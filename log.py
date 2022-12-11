@@ -1,8 +1,8 @@
 import logging
-from typing import Optional
-from enum import Enum
+import enum
+import typing
 
-class LoggingLevel(Enum):
+class LoggingLevel(enum.Enum):
 
     DEBUG = logging.DEBUG
     INFO = logging.INFO
@@ -17,7 +17,7 @@ def _set_formatter(format: str = "%(asctime)s:%(name)s[%(levelname)s] - %(messag
 class Logger:
     """Logger utility to help with logging data."""
 
-    def __init__(self, name: Optional[str] = None, format: str = "%(asctime)s:%(name)s[%(levelname)s] - %(message)s", level: LoggingLevel = LoggingLevel.DEBUG) -> None:
+    def __init__(self, name: typing.Optional[str] = None, format: str = "%(asctime)s:%(name)s[%(levelname)s] - %(message)s", level: LoggingLevel = LoggingLevel.DEBUG) -> None:
         self.level = level
         self.format = format
         if name:

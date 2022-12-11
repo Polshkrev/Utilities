@@ -1,4 +1,4 @@
-from typing import Optional
+import typing
 import zipfile
 
 def zip_files(name: str, files: list[str]) -> None:
@@ -16,7 +16,7 @@ def extract_zip_file(zipped_file: str) -> None:
     with zipfile.ZipFile(file, "r") as f:
         f.extractall(zipped_file)
 
-def compare(file1: str, file2: str) -> Optional[bool]:
+def compare(file1: str, file2: str) -> typing.Optional[bool]:
 
     with open(file1, "r", encoding='utf-8') as f:
         contents1 = f.readlines()
