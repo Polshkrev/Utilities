@@ -1,2 +1,2 @@
 [build-system]
-build-backend = "setuptools.build_meta
+build-backend = "setuptools.build_meta"
