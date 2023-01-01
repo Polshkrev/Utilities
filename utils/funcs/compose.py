@@ -1,8 +1,6 @@
 import functools
-import typing
 
-ComposableFunction = typing.Callable[..., typing.Any]
-# from .aliases import ComposableFunction
+from utils.aliases import ComposableFunction
 
 def compose(*functions: ComposableFunction) -> ComposableFunction:
     """Ruduces composeable functions."""
