@@ -1,1 +1,1 @@
-from src.utils import log, files, funcs, patterns
+from . import log, files, funcs, patterns
