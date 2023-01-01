@@ -1,1 +1,1 @@
-from . import log, aliases, files, funcs, patterns
+from . import globals, files, funcs, patterns
