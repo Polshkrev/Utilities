@@ -1,1 +1,1 @@
-from src.utils import aliases, log, funcs, patterns
+from utils import aliases, log, funcs, patterns
