@@ -1,1 +1,1 @@
-from utils import funcs, patterns
+from utils import aliases, log, funcs, patterns
