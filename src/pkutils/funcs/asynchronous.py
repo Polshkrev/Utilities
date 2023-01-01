@@ -1,6 +1,6 @@
 import asyncio
 
-from src.utils.aliases import AwaitableFunction
+from ..globals import AwaitableFunction
 
 async def run_sequence(*functions: AwaitableFunction) -> None:
     for function in functions:
