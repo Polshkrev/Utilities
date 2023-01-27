@@ -1,6 +1,6 @@
 import functools
 
-from .aliases import ComposableFunction
+from ..aliases import ComposableFunction
 
 def compose(*functions: ComposableFunction) -> ComposableFunction:
     """Ruduces composeable functions."""
