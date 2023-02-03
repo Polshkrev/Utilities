@@ -25,7 +25,7 @@ class Logger:
         else:
             self.logger = logging.getLogger(__name__)
 
-    def _set_level(self, level: LoggingLevel) -> None:
+    def set_level(self, level: LoggingLevel) -> None:
         """Helper method to set the level of the logger."""
         self.logger.setLevel(level.value)
 
@@ -43,18 +43,18 @@ class Logger:
 
     def full_setup(self, filename: str = "./log.log") -> None:
         """Sets-up the logger with BOTH the console, and a file."""
-        self._set_level(self.level)
+        self.set_level(self.level)
         self.add_console()
         self.add_file(filename)
 
     def console_only(self) -> None:
         """Sets-up the logger that only logs to the console."""
-        self._set_level(self.level)
+        self.set_level(self.level)
         self.add_console()
 
     def file_only(self, filename: str = "./log.log") -> None:
         """Sets-up the logger that only logs to a file."""
-        self._set_level(self.level)
+        self.set_level(self.level)
         self.add_file(filename)
 
     def log(self, message: str, level: LoggingLevel = LoggingLevel.DEBUG) -> None:
