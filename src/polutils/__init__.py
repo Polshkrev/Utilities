@@ -1,3 +1,2 @@
-from .aliases import JSON, JSONList, JSONObject, ComposableFunction, AwaitableFunction, Grid
-from .log import Logger, LoggingLevel
-from . import files, funcs, patterns
+from polutils.aliases import JSON, JSONList, JSONObject, ComposableFunction, AwaitableFunction, Grid
+from polutils.log import Logger, LoggingLevel

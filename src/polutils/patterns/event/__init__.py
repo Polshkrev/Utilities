@@ -1,1 +1,1 @@
-from .event import subscribe, post
+from polutils.patterns.event import subscribe, post
