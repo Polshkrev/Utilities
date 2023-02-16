@@ -1,1 +1,1 @@
-from polutils.patterns.factory import register, unregister, create, Interface, load_modules
+from polutils.patterns.factory.factory import register, unregister, create, Interface, load_modules
