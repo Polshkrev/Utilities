@@ -1,6 +1,6 @@
 import asyncio
 
-from ..aliases import AwaitableFunction
+from polutils.aliases import AwaitableFunction
 
 async def run_sequence(*functions: AwaitableFunction) -> None:
     for function in functions:
