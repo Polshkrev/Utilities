@@ -1,21 +1,24 @@
 # Utilities
 
 ## Table of Contents
-
-1. [Files](#files)
+1. [Desciption](#description)
+2. [Files](#files)
     1. [File](#file)
     2. [Preprocess](#preprocess)
-2. [Funcs](#funcs)
+3. [Funcs](#funcs)
     1. [Asynchronous](#asynchronous)
     2. [Compose](#compose)
-3. [Patterns](#patterns)
+4. [Patterns](#patterns)
     1. [Event](#event)
     2. [Factory](#factory)
         1. [Diagrams](#factory-implementation)
-4. [Globals](#globals)
+5. [Globals](#globals)
     1. [Aliases](#aliases)
     2. [Log](#log)
         1. [Diagrams](#logger-implementation)
+
+### Description
+This package is designed to cut down on the repetative nature of some python practices such as logging, type hinting, and file management. The name of the package &mdash; polutils &mdash; is a pun on the russian word "получилось" (paloocheelas) meaning "it happened", or "it turned out to be." The name also combines the first few letters of my name and "utils".
 
 ### Files
 
