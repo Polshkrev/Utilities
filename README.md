@@ -2,6 +2,7 @@
 
 ## Table of Contents
 1. [Desciption](#description)
+2. [Quick Start](#quick-start)
 2. [Files](#files)
     1. [File](#file)
     2. [Preprocess](#preprocess)
@@ -19,6 +20,11 @@
 
 ### Description
 This package is designed to cut down on the repetative nature of some python practices such as logging, type hinting, and file management. The name of the package &mdash; polutils &mdash; is a pun on the russian word "получилось" (paloocheelas) meaning "it happened", or "it turned out to be." The name also combines the first few letters of my name and "utils".
+
+### Quick Start
+```console
+pip install "git+https://github.com/Polshkrev/Utilities.git"
+```
 
 ### Files
 
