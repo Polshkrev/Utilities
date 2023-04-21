@@ -3,9 +3,7 @@
 ## Table of Contents
 
 1. [Files](/docs/en-UK/files/README.md)
-2. [Funcs](#funcs)
-    1. [Asynchronous](#asynchronous)
-    2. [Compose](#compose)
+2. [Funcs](/docs/en-UK/funcs/README.md)
 3. [Patterns](#patterns)
     1. [Event](#event)
     2. [Factory](#factory)
@@ -14,18 +12,6 @@
     1. [Aliases](#aliases)
     2. [Log](#log)
         1. [Diagrams](#logger-implementation)
-
-### Funcs
-
-#### __Asynchronous__
-
-As the name implies, this is a module that deals with the asynchronous operations of functions.
-
-#### __Compose__
-
-Again, as the name suggests, this module deals with function and string composition.
-
----
 
 ### Patterns
 
