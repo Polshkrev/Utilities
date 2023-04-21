@@ -5,9 +5,6 @@
 1. [Files](/docs/en-UK/files/README.md)
 2. [Funcs](/docs/en-UK/funcs/README.md)
 3. [Patterns](#patterns)
-    1. [Event](/docs/en-UK/patterns/event/README.md)
-    2. [Factory](#factory)
-        1. [Diagrams](#factory-implementation)
 4. [Globals](#globals)
     1. [Aliases](#aliases)
     2. [Log](#log)
@@ -16,30 +13,6 @@
 ### Patterns
 
 A package that aids with the boilerplate associated with most design patterns, such as the event or abstract-factory pattern.
-
-#### __Factory__
-
-This module essentialy is a mapping of strings to initializers. The way it seperates creation from use is by storing the instance in a dictionary under the name given in the register function (see [diagrams](#diagrams) below) which is called using the create function. This delegates the create to one function and the use to the programme implementing the utility.
-
-#### Factory Implementation:
-
-```mermaid
-classDiagram
-    class Factory {
-        #Object registration
-        +Interface interface
-        +register(String type, Callable initializer) null
-        +unregister(String type) null
-        +create(Object arguments) Callable
-        #import_modules(String name) Interface
-        +load_modules(Array~String~ modules) null
-    }
-    class Interface {
-        <<Interface>>
-        +initialize()$ null
-    }
-    Factory *-- Interface
-```
 
 ---
 
