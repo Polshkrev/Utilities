@@ -4,15 +4,11 @@
 
 1. [Files](/docs/en-UK/files/README.md)
 2. [Funcs](/docs/en-UK/funcs/README.md)
-3. [Patterns](#patterns)
+3. [Patterns](/docs/en-UK/patterns/README.md)
 4. [Globals](#globals)
     1. [Aliases](#aliases)
     2. [Log](#log)
         1. [Diagrams](#logger-implementation)
-
-### Patterns
-
-A package that aids with the boilerplate associated with most design patterns, such as the event or abstract-factory pattern.
 
 ---
 
